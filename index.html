@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>login Authentication</title>
+</head>
+<body>
+    <div class="container">
+        <div class="authentication">
+            <form id="login" >
+                <h1>Login</h1>
+                <label for="username"></label>
+                <input type="text" id="username" name="username" placeholder="email Id" class="text-box" required><br>
+                <br>
+                <label for="password"></label>
+                <input type="password" id="password" name="password" placeholder="Password" class="psw-box" required ><br>
+                <br>
+                <input type="submit" value="Login" class="loginBtn">
+                <h4 class="signupBtn">Don't have an account ? <a href="#" id="signUpBtn">Sign up</a></h4>
+            </form>
+            <form id="signup" class="hidden" >
+                <h1>Sign up</h1>
+                <label for="createUsername"></label>
+                <input type="text" name="createUsername" placeholder="email id " id="createUsername" class="text-box-2" required pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" title ="ajitha@gamail.com"><br>
+                <br>
+                <label for="createPassword"></label>
+                <input type="password" name="createPassword" placeholder="Password" id="createPassword" class="psw-box-2" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"><br>
+                <br>
+                <input type="submit" value="Sign up" id="btn">
+                <h4 class="accountBtn">created an account ? <a href="#" id="accBtn">Go to login page</a></h4>
+            </form>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

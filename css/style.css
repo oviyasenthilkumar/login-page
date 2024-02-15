@@ -1,0 +1,48 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+.container{
+    height: 100vh;
+    width: 90%;
+    margin: auto;
+    background-image: url(../img/bg.avif);
+    background-size: cover;
+}
+.authentication{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height:100vh;
+}
+.hidden{
+    display: none;
+}
+#login a, .accountBtn a{
+    text-decoration: none;
+    color:rgba(2, 80, 140, 0.866) ;
+}
+#login, #signup{
+    text-align: center;
+    padding:4rem ;
+    border: 1px solid #fff;
+    background-color: #fff;
+}
+.text-box, .psw-box, .text-box-2, .psw-box-2{
+    padding:10px 20px;
+    margin: 20px 0 0;
+}
+.signupBtn, .accountBtn{
+    padding-top: 25px;
+}
+.loginBtn, #btn{
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: rgba(48, 147, 222, 0.866);
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+    width: 80%;
+}
