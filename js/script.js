@@ -1,5 +1,11 @@
 let signUpForm = document.getElementById("signup");
 signUpForm.addEventListener("submit", signUpRegistration);
+let upperCase = /[A-Z]/g; 
+let lowerCase = /[a-z]/g;  
+let number=/[0-9]/g;
+let specialCharacters = /[!@#$%^&*]/g; 
+
+
 
 let signUpBtn = document.getElementById("signUpBtn");
 signUpBtn.addEventListener("click",function commit(){
@@ -16,10 +22,7 @@ event.preventDefault();
 let username = document.querySelector("#createUsername").value;
 let password = document.querySelector("#createPassword").value;
 console.log(username, password);
-if(password > 8 && password < 15){  
-    if((password > a && password < z)&&(password > A && password < Z)){
-        return alert("your password successfully created");
-    }
+
     // get data from local storage
     let users = JSON.parse(localStorage.getItem("users")) || [];
     console.log(users);
@@ -29,16 +32,16 @@ if(password > 8 && password < 15){
     if(existingUser){
         alert("User already exists. please create a new one");
     }else{
-        psw(password);
-        users.push({username:username, password:password})
-    //update username and password
+        if(password.length >= 8 && password.match(upperCase) && password.match(lowerCase) && password.match(specialCharacters) && password.match(number)){
+            users.push({username:username, password:password})
+            //update username and password
 
-    localStorage.setItem("users", JSON.stringify(users));
-    alert("Registration updated successfully")
+            localStorage.setItem("users", JSON.stringify(users));
+            alert("Registration updated successfully")
+    }else{
+        alert("please enter a valid password")
     }
-}else{
-    alert("reset ur password with one uppercase,one lowercase and password must contain 8 - 15 characters");
-}
+        }
 }
 
 const loginForm = document.getElementById("login");
