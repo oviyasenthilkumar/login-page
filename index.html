@@ -12,7 +12,7 @@
             <form id="login" >
                 <h1>Login</h1>
                 <label for="username"></label>
-                <input type="text" id="username" name="username" placeholder="email Id" class="text-box" required><br>
+                <input type="text" id="username" name="username" placeholder="email Id" class="text-box" required autocomplete="off"><br>
                 <br>
                 <label for="password"></label>
                 <input type="password" id="password" name="password" placeholder="Password" class="psw-box" required ><br>
@@ -23,14 +23,17 @@
             <form id="signup" class="hidden" >
                 <h1>Sign up</h1>
                 <label for="createUsername"></label>
-                <input type="text" name="createUsername" placeholder="email id " id="createUsername" class="text-box-2" required pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" title ="ajitha@gmail.com"><br>
+                <input type="text" name="createUsername" placeholder="email id " id="createUsername" class="text-box-2" required pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" title="abc@gmail.com"><br>
                 <br>
                 <label for="createPassword"></label>
-                <input type="password" name="createPassword" placeholder="Password" id="createPassword" class="psw-box-2"><br>
+                <input type="password" name="createPassword" placeholder="Password " id="createPassword" class="psw-box-2" title="ABCre2341@#"><br>
                 <br>
                 <input type="submit" value="Sign up" id="btn">
                 <h4 class="accountBtn">created an account ? <a href="#" id="accBtn">Go to login page</a></h4>
             </form>
+        </div>
+        <div>
+            <img src="img/giffy.gif">
         </div>
     </div>
     <script src="js/script.js"></script>
